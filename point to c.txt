@@ -1,0 +1,142 @@
+
+https://onlinegdb.com/rJP1EO2w8
+
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+char *listdefine[] = {
+  "APP_RELATED_EVENT = 0x00",
+  "APPEVT_PW_ON = APP_RELATED_EVENT",
+  "APPEVT_PW_OFF",
+  "APPEVT_PW_SAVING",
+  "APPEVT_PW_ON_INIT",
+  "APPEVT_MAIN_NO_SYNC",
+  "APPEVT_P1_NO_SYNC",
+  "APPEVT_P2_NO_SYNC",
+  "APPEVT_P3_NO_SYNC",
+  "APPEVT_NO_SYNC_LAST",
+  "APPEVT_TX_NO_SYNC_LAST",
+  "APPEVT_MAIN_NO_CABLE",
+  "APPEVT_P1_NO_CABLE",
+  "APPEVT_P2_NO_CABLE",
+  "APPEVT_P3_NO_CABLE",
+  "APPEVT_NO_CABLE_LAST",
+  "APPEVT_MAIN_UNSTABLE",
+  "APPEVT_P1_UNSTABLE",		// 0x10
+  "APPEVT_P2_UNSTABLE",
+  "APPEVT_P3_UNSTABLE",
+  "APPEVT_COMMON_UNSTABLE",
+  "APPEVT_UNSTABLE_LAST",
+  "APPEVT_DAISY_UNSTABLE",
+  "APPEVT_HT_UNSTABLE",
+  "APPEVT_HX_UNSTABLE",
+  "APPEVT_MAIN_SYNC_DETECTED",
+  "APPEVT_P1_SYNC_DETECTED",
+  "APPEVT_P2_SYNC_DETECTED",
+  "APPEVT_P3_SYNC_DETECTED",
+  "APPEVT_MAIN_PRE",
+  "APPEVT_P1_PRE",
+  "APPEVT_P2_PRE",
+  "APPEVT_P3_PRE",		// 0x20
+  "APPEVT_COMMON_PRE",
+  "APPEVT_MAIN_NML",
+  "APPEVT_P1_NML",
+  "APPEVT_P2_NML",
+  "APPEVT_P3_NML",
+  "APPEVT_COMMON_NML",
+  "APPEVT_MAIN_OOL",
+  "APPEVT_P1_OOL",
+  "APPEVT_P2_OOL",
+  "APPEVT_P3_OOL",
+  "APPEVT_OOL",
+  "APPEVT_MAIN_OOR",
+  "APPEVT_P1_OOR",
+  "APPEVT_P2_OOR",
+  "APPEVT_P3_OOR",
+  "APPEVT_OOR_AND_NO_SIGNAL",	// 0x30
+  "APPEVT_DDR_OOL",
+  "APPEVT_FORCE_PW_SAVING",
+  "APPEVT_REFRESH_OSD",
+  "APPEVT_NONE",
+  "APPEVT_END",
+  "KEY_RELATED_EVENT = 0x40",
+  "KEYEVT_PWR = KEY_RELATED_EVENT",
+  "KEYEVT_MENU",
+  "KEYEVT_AUTO",
+  "KEYEVT_INPUT",
+  "KEYEVT_FUNC",
+  "KEYEVT_UP",
+  "KEYEVT_DOWN",
+  "KEYEVT_LEFT",
+  "KEYEVT_RIGHT",
+  "KEYEVT_FACT",
+  "KEYEVT_FACTRESET",
+  "KEYEVT_PWLOCK",
+  "KEYEVT_OSDLOCK",
+  "KEYEVT_TIMING_SWITCH",
+#ifdef SHOP_MODE
+  "KEYEVT_SHOPMODE",
+#else
+  "KEYEVT_DEMO",
+#endif
+#ifdef USB_UPDATE
+  "KEYEVT_USBUPDATE",
+#if USB_UPDATE_PE
+  "KEYEVT_USBCHK",		// h"SS test     
+#endif
+#endif
+#if MGA_SUPPORT == ON
+  "KEYEVT_MGA",
+  "KEYEVT_TESTPAT",
+#endif
+  "KEYEVT_NONE",
+  "KEYEVT_END",
+  "OSD_RELATED_EVENT = 0x80",
+  "OSDEVT_UPD_USR = OSD_RELATED_EVENT",
+  "OSDEVT_UPD_SYS",
+  "OSDEVT_UPD_TMG",
+  "OSDEVT_UPD_CAL",
+  "OSDEVT_NONE",
+  "OSDEVT_END",
+  "DDCCI_RELATED_EVENT = 0xC0",
+  "DDCCIEVT_UPD_USR = DDCCI_RELATED_EVENT",
+  "DDCCIEVT_UPD_SYS",
+  "DDCCIEVT_UPD_TMG",
+  "DDCCIEVT_UPD_CAL",
+  "DDCCIEVT_PWR_ON",
+  "DDCCIEVT_PWR_OFF",
+  "DDCCIEVT_PWR_SAVING",
+  "DDCCIEVT_NONE",
+  "DDCCIEVT_END",
+  "SS_RELATED_EVENT = 0xD0",
+  "SSEVT_UPD_USR = SS_RELATED_EVENT",
+  "SSEVT_UPD_SYS",
+  "SSEVT_UPD_TMG",
+  "SSEVT_UPD_CAL",
+  "SSEVT_PWR_ON",
+  "SSEVT_PWR_OFF",
+  "SSEVT_PWR_WAKEUP",
+  "SSEVT_PWR_SAVING",
+  "SSEVT_NONE",
+  "SSEVT_END",
+  "NO_EVENT = 0xFF",
+};
+
+int
+main ()
+{
+  int i, j;
+  for (int i = 0; i < 100; i++)
+    {
+      printf ("%s", listdefine[i]);
+      printf ("\n");
+    }
+  return 0;
+}
+
